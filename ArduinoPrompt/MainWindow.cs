@@ -347,7 +347,7 @@ namespace ArduinoPrompt
             foreach (object obj in variablePicker.Items)
             {
                 Variable var = (Variable)obj;
-                var.plotValues.Clear();
+                if (var != null) var.plotValues.Clear();
             }
 
             canvas.Invalidate();
